@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body{
+    overflow-x: hidden;
+    margin:0;
+}
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+.top_bar {
+    width: 100%;
+    height: 35px;
+    position: relative;
+    background: #ececec;
+    display: fixed;
+}
+
+.top_bar .nav {
+    position: relative;
+    width: 100%;
+    height: inherit;
+    padding: 0 17%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    background-color: white;
+    padding-left: 10px;
+    position: relative;
+    min-width: 25%;
+    border-radius: 3px;
+    display: flex;
+    left: 1;
+}
+
+.search button{
+    background: transparent;
+    border: none;
+    outline: 0;
+}
+
+.search button i {
+    color: #ececec;
+    font-size: 1em;
+}
+
+.search input[type="text"] {
+    background:  transparent;
+    color: #2e2e2e;
+    border: none;
+    font-size: 0.7em;
+    margin: 4px 0 4px 3px;
+    outline: 0;
+}
+
+.top_bar-login-cart {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /*space between items, works in flex and grid*/
+}
+
+.top_bar-login-cart li a{
+    color: #1a1a1a;
+}
+
+.top_bar-login-cart li {
+    font-size: 0.8em;
+    color: #1a1a1a;
+}
+
+
+.sub_bar {
+    width: 100%;
+    position: relative;
+    display: block;
+    padding: 15px 17%;
+    margin-bottom: -27px;
+}
+
+.first-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first-bar h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 2.5em;
+    position: relative;
+    font-weight: 600;
+}
+
+.first-bar h1 span,
+.bottom-footer .credits span {
+    color: #6b8e23;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+}
+/*.socials li{
+    border: 1.5px solid rgba(47, 119, 119, 0.63);/*the a in rgba is for transperency
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 25%;
+    transition: 0.5s;
+    cursor: pointer;
+}*/ /*did not use the li class again because im only styyling the icon*/
+.socials i {
+    color: #626263;
+    border: 1.5px solid #626263;/*the a in rgba is for transperency*/
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 5px;
+    margin-left: 10px;
+    border-radius: 50%;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 10px;
+}
+.socials li i:hover {
+    color : #6b8e23;
+    border: 1.5px solid #6b8e23;
+}
+.nav-bar {
+    width: 100%;
+    height: fit-content;
+    border-top: 0.2px solid #aeaeb0;
+    border-bottom: 0.2px solid #aeaeb0;
+    position: relative;
+    margin: 25px 0;
+    padding: 2px 0 1px 0;
+
+}
+
+.nav-border {
+    width: 100%;
+    height: fit-content;
+    border-top: 0.2px solid #aeaeb0;
+    border-bottom: 0.2px solid #aeaeb0;
+}
+
+.nav-border ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav-border ul li {
+    border-right: 1px solid #aeaeb0;
+    font-size: 0.8em;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.nav-border ul li:last-child{
+    border: none;
+}
+
+.nav-border ul li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.nav-border ul li a:hover { /*a for text*/
+    color : rgb(78, 112, 8)
+}
+
+.nav-bar i {
+    margin-right: 8px ;
+}
+
+.dropdown-menu-1 {
+    display: none;
+} 
+
+.nav-border ul li:hover .dropdown-menu-1{ 
+    display: block;
+    position: absolute;
+    background: white;
+    margin-top: 15px;
+    margin-left: -15px;
+    border: 1px solid #aeaeb0;
+}
+
+.nav-border ul li:hover .dropdown-menu-1 ul {
+    display: block;
+    margin: 10px;
+}
+
+.nav-border ul li:hover .dropdown-menu-1 ul li {
+    width: 150px;
+    padding: 10px;
+    /* border-bottom: 1px solid #d3d3d3; */
+    border: 0;
+    text-align: left;
+    display: block;
+}
+
+.fa-angle-right {
+    float: right;
+}
+
+.dropdown-menu-2 {
+    display: none;
+}
+
+.sub-menu:hover .dropdown-menu-2 {
+    display: block;
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 140px;
+    background: white;
+    border: 1px solid #aeaeb0;
+}
+
+.dropdown-menu-2 ul li {
+    font-size: 1em;
+}
+/* End of topbar */
+
+/* java slide show */
+
+/* .img-slider {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 10px;
+    background: #1a1a1a;
+}
+
+.img-slider .slide {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+}
+
+.img-slider .slide img{
+    z-index: 1;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.img-slider .slide .info{
+    position: absolute;
+    top: 8;
+    padding: 15px 30px;
+}
+.img-slider .slide .info h2{
+    color: #fff;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+} */
+
+.wall-img img{
+    /* text-align: center; */
+    margin-top: 0;
+    padding: 0px;
+    width: 100%;
+    max-width: 100%;
+    height:auto;
+}
+
+/* Testimonials */
+
+.container {
+    width: 100%;
+    position: relative;
+    padding: 0 17%;
+}
+
+.testimonial-grid {
+    width: 100%;
+    position: relative;
+    display: grid;
+    column-gap: 70px;
+    row-gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
+    /* margin-left: 6%; */
+}
+
+.testimonial-header {
+    width: 100%;
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: 55px;
+    margin: 40px 0;
+    height: 30px;
+}
+
+.testimonial-header h2 {
+    text-align: center;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-transform: none;
+    line-height: 1.5;
+    color: #333;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.testimonial-block {
+    width: 250px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7px;
+}
+
+.testimonial-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.testimonial-img img {
+    max-width: 100%;
+}
+
+.testimonial-block-text {
+    margin-bottom: 5px;
+}
+
+.testimonial-block-text p {
+    font-size: 0.8em;
+    text-align: center;
+} 
+
+.testimonial-name a {
+    text-decoration: none;
+}
+
+.testimonial-name a span {
+    color: #6b8e23;
+    font-size: 0.79em;
+}
+
+.testimonial-name a span:hover {
+    color: #8cca10;
+}
+
+.testimonial-name a span::before {
+    content: ' - ';
+    color: #1a1a1a;
+}
+
+.gallery-container {
+    width: 100%;
+    padding-top: 55px;
+    margin-left: 1%;
+    position: relative;
+}
+
+.gallery-grid {
+    position: relative;
+    display: grid;
+    column-gap: 20px;
+    row-gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
+    padding-bottom: 50px;
+}
+
+.gallery-block {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-block img {
+    /* max-width: 100%;  would have worked if all the image were the same width and height */
+    width: 100%;
+    height: 100%; 
+    transition: 4s all;
+    cursor: pointer;
+}
+
+.gallery-block img:hover {
+    transform: scale(1.1);
+}
+
+/* footer */
+
+.footer{
+    /* 
+    text-align: center;
+    width: 100%;
+    letter-spacing: 1px; */
+    text-align: center;
+    background-color: #0000;
+    border-top: solid 1px #161616;
+    font-size: 14px;
+    line-height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    color: #222;
+    gap: 20px;
+    padding: 30px 0;
+    margin-top: 2em;
+}
+
+.sign_up_form{
+    text-align: center;
+}
+
+.input_row {
+    display: flex;
+    gap: 8px;
+}
+
+.input_row input {
+    padding: 6px 12px;
+    outline: none;
+    font-size: 10px;
+}
+
+.footer .submit_button{
+background-color: #6b8e23;/*!important; */
+border-color: #6b8e23; /*!important;*/
+cursor: pointer;
+border: 0;
+padding: 8px 24px;
+border-radius: 2px;
+font-size: 12px;
+color: white;
+text-transform: uppercase;
+}
+
+.footer_social_icon{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100px;
+}
+
+.footer_social_icon i{
+    color: #626263;
+    border: 1.5px solid #626263;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 5px;
+    margin-left: 10px;
+    border-radius: 50%;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.bottom-footer {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    border-top: 1px solid #000;
+    align-items: center;
+    flex-direction: column;
+}
+
+.payment-icons {
+    display: flex;
+    gap: 25px;
+}
+
+.payment-icons li i {
+    font-size: 2em;
+}
+
+.smoothies-and-bowls {
+    width: 100%;
+    padding: 0 17%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.smoothies-and-bowls .header {
+    width: 100%;
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: 55px;
+    margin: 40px 0;
+    height: 30px;
+}
+
+.smoothies-and-bowls .header h2 {
+    text-align: center;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-transform: none;
+    line-height: 1.5;
+    color: #333;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.smoothies-and-bowls .grid {
+    position: relative;
+    display: grid;
+    column-gap: 15px;
+    row-gap: 25px;
+    grid-template-columns: repeat(4, minmax(250px, 250px));
+    padding-bottom: 50px;
+}
+
+.smoothies-and-bowls .block {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+}
+
+.smoothies-and-bowls .block .image {
+    width: 225px;
+    height: 225px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+
+.smoothies-and-bowls .block .image img {
+    max-width: 100%;
+    background-position: center;
+    bottom: 50%;
+    position: relative;
+    transition: 5s all;
+}
+.smoothies-and-bowls .block .image img:hover {
+    transform: scale(1.1);
+}
+
+.smoothies-and-bowls .block p {
+    font-size: 13px;
+    text-align: center;
+    padding: 0 8px;
+}
+
+.smoothies-and-bowls .block b {
+    font-size: 12px;
+}
